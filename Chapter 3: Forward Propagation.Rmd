@@ -17,3 +17,19 @@ Say you wanted to create a simple neural network that takes only on input and ou
 
 Insert diagram below. 
 
+# Simple Neural Net
+```{python, basic neural net}
+weight = 0.1 
+
+def neural_network(input, weight):
+    prediction = input * weight
+    return prediction
+    
+numb_of_toes = [8.5, 9.5, 10, 9]
+
+input = numb_of_toes[0]
+
+pred = neural_network(input, weight)
+print (pred)
+```
+
