@@ -19,10 +19,13 @@ Insert diagram below.
 
 # Simple Neural Net
 
-*Python*
+**Python**
+
 ```{python, basic neural net}
+# initial weight 
 weight = 0.1 
 
+# network 
 def neural_network(input, weight):
     prediction = input * weight
     return prediction
@@ -35,10 +38,13 @@ pred = neural_network(input, weight)
 print (pred)
 ```
 
-*R*
+**R**
+
 ```{r}
+# initial weight 
 weight_R <- 0.1
 
+# network
 neural_networkR <- function(input, weight_R)
 {
   prediction <- input * weight_R
@@ -51,6 +57,51 @@ input <- numb_of_toes[1]
 
 pred <- neural_networkR(input, weight_R)
 
-print(pred)
+pred
 ```
+
+**What our network is doing?**
+
+Go back for more notes later.
+
+
+
+**Making a prediction with multiple inputs** 
+
+
+
+
+
+**R**
+
+```{r}
+weight_sum <- function(a, b)
+{
+  output <- 0 
+  
+  output <- a %*% b
+  
+  return(output)
+}
+
+wghts <- c(0.1, 0.2, 0)
+
+neural_netR2 <- function(input, wghts)
+{
+  pred <- weight_sum(input, wghts)
+  return(pred)
+}
+
+toes <- c(8.5, 9.5, 9.9, 9.0)
+wlrec <- c(0.65, 0.8, 0.8, 0.9)
+nfans <- c(1.2, 1.3, 0.5, 1.0)
+input <- c(toes[1], wlrec[1], nfans[1])
+pred <- neural_netR2(input, wghts)
+
+pred
+
+
+
+```
+
 
