@@ -9,3 +9,11 @@ knitr::opts_chunk$set(echo = TRUE)
 
 
 # Prediction
+
+A good rule of thumb is to provide as much input data as a human would need to a machine to make an accurate prediction. It is important to have a good interpretation of the shape of the data before constructing a nueral network. 
+
+Case Study: Prediction of the likelihood that a baseball team will win. 
+Say you wanted to create a simple neural network that takes only on input and output producing a prediction. 
+
+Insert diagram below. 
+
