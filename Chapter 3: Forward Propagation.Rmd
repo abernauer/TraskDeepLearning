@@ -151,4 +151,28 @@ pred <- neural_netR2(input, wghts)
 pred
 ```
 
+Go back to page 31 for discussion of dot product measuring similarity between vectors. 
+
+**Making a Prediction with a single input and multiple outputs**
+
+```{python}
+weights = [0.3, 0.2, 0.9]
+
+def ele_mult(scalar, vec):
+    output = [0, 0, 0]
+    assert( len(output) == len(vec))
+    for i in range(len(vec)):
+        output[i] = scalar * vec[i]
+    return output
+
+def neural_network(input, weights):
+    pred = ele_mult(input, weights)
+    return pred
+wlrec = [0.65, 0.8, 0.8, 0.9]
+input = wlrec[0]
+pred = neural_network(input, weights)
+print (pred)
+
+```
+
 
