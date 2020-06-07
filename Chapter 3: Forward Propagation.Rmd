@@ -265,10 +265,14 @@ print (pred)
 
 **Numpy version **
 
+```{python}
+
+```
 
 
 
+* finish numpy version of the code.
+* add notes summarizing sections 
+* write R equivalent of code chunks
 
-
-
-*Numpy primer*
+**Numpy primer**
