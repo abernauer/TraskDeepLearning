@@ -263,3 +263,12 @@ pred = neural_network(input, weights)
 print (pred)
 ```
 
+**Numpy version **
+
+
+
+
+
+
+
+*Numpy primer*
