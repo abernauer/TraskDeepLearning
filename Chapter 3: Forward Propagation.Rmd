@@ -97,6 +97,21 @@ Go back for more notes later.
 **Making a prediction with multiple inputs** 
 
 
+```{r}
+grViz("digraph I{
+      graph[style = dot, rankdir = LR]
+      A [shape = circle, label = 'Inputs']
+      B [shape = circle, label = '# toes']
+      C [shape = circle, label = 'win loss']
+      D [shape = circle, label = '# fans']
+      'win?' [shape = circle, xlabel = 'Predictions come out here']
+      
+      A -> {B, C, D}
+      B -> 'win?' [label = '0.1']
+      C -> 'win?' [label = '0.2']
+      D -> 'win?' [label = '0']
+}")
+```
 
 
 **Python** 
