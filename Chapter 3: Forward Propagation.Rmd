@@ -34,6 +34,19 @@ grViz("digraph N {
 
 # Simple Neural Net
 
+```{r}
+grViz("digraph B{
+      graph[style = dot, rankdir = LR, size = 9]
+      node[shape = circle]
+      8.5 [xlabel = 'input']
+      0.85 [xlabel = 'prediction']
+      
+      8.5 -> 0.85 [label = '8.5 x 0.1']
+    
+}")
+```
+
+
 **Python**
 
 ```{python, basic neural net}
