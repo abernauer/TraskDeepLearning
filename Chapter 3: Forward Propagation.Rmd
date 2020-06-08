@@ -137,6 +137,21 @@ input = [toes[0], wlrec[0], nfans[0]]
 pred = neural_network(input, weights)
 print(pred)
 ```
+```{r}
+grViz("digraph J{
+      graph[style = dot, rankdir = LR]
+      '8.5'
+      '65%'
+      '1.2'
+      '0.98'
+      '+'
+      
+      '8.5' -> '+'[label = '8.5 x 0.1']
+      '65%' -> '+'[label = '.65 x 0.2']
+      '1.2' -> '+'[label = '1.2 x 0']
+      '+' -> '0.98'[label = '0.85 + .13 + .0']
+}")
+```
 
 
 **NumPY**
@@ -345,7 +360,7 @@ print (pred)
 
 
 
-* finish numpy version of the code.
+
 * add notes summarizing sections 
 * write R equivalent of code chunks
 
