@@ -5,6 +5,7 @@ output: html_document
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
+library(DiagrammeR)
 ```
 
 
@@ -15,7 +16,21 @@ A good rule of thumb is to provide as much input data as a human would need to a
 Case Study: Prediction of the likelihood that a baseball team will win. 
 Say you wanted to create a simple neural network that takes only on input and output producing a prediction. 
 
-Insert diagram below. 
+
+
+```{r}
+grViz("digraph N {
+   graph[style = dot, rankdir = LR, size = 9]
+   node [ shape = circle]
+   A [label = '# toes']
+   B [label = 'win ?']
+   
+   A -> B [label = '0.1']
+   
+}")
+```
+
+
 
 # Simple Neural Net
 
@@ -307,3 +322,4 @@ print (pred)
 * write R equivalent of code chunks
 
 **Numpy primer**
+
