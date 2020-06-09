@@ -94,7 +94,7 @@ Go back for more notes later.
 
 
 
-**Making a prediction with multiple inputs** 
+# Making a prediction with multiple inputs
 
 
 ```{r}
@@ -211,7 +211,7 @@ pred
 
 Go back to page 31 for discussion of dot product measuring similarity between vectors. 
 
-**Making a Prediction with a single input and multiple outputs**
+# Making a Prediction with a single input and multiple outputs
 
 ```{python}
 weights = [0.3, 0.2, 0.9]
@@ -235,7 +235,7 @@ print (pred)
 
 
 
-**Predicting with multiple inputs and outputs **
+# Predicting with multiple inputs and outputs
 
 ```{python}
           # toes #ws #fans
@@ -278,7 +278,9 @@ print (pred)
  
 
 
-**Predicting on Predictions **
+# Predicting on Predictions
+
+**Python **
 
 ```{python}
           # toes % w  #fans
@@ -362,7 +364,8 @@ print (pred)
 
 
 * add notes summarizing sections 
+* and numpy primere
 * write R equivalent of code chunks
 
-**Numpy primer**
+# Numpy primer
 
