@@ -1,4 +1,4 @@
----
+    ---
 title: 'Chapter 4: Gradient Descent'
 output: html_document
 ---
@@ -8,3 +8,11 @@ knitr::opts_chunk$set(echo = TRUE)
 ```
 
   
+# Predict, compare, learn 
+
+ Questions asked in the proccess of reading chapter 3, "How do we learn we set weights so our Network's predictions are accurate?" That is the main focus of this chapter. 
+ 
+ 
+# Compare 
+
+
