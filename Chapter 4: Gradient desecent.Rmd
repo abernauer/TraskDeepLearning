@@ -77,6 +77,17 @@ p_up = neural_network(input, weight+lr)
 e_up = (p_up - true) ** 2
 print(e_up)
 
+p_dn = neural_network(input, weight-lr)
+e_dn = (p_dn - true) ** 2
+print(e_dn)
+
+if (error  > e_dn  or error > e_up):
+  
+  if(e_dn < e_up):
+      weight -= lr
+      
+  if(e_dn > e_up):
+      weight += lr
 
     
 ```
