@@ -137,5 +137,7 @@ for iteration in range(20):
     print("Error:" + str(error) + " Predictions:" + str(pred))
 ```
 
+* add section headings 
+* finish notes summarizing each section
 
 
