@@ -158,7 +158,40 @@ for iteration in range(20):
 
 # One iteration of Gradient descent
 
+```{r}
+DiagrammeR::grViz("digraph empty_net{
+graph [style = dot, rankdir = LR]
 
+node [shape = circle]
+
+'# toes' [xlabel = 'input data goes here']
+'win?' [xlabel = 'Predictions come out here']
+
+'# toes' -> 'win?' [label = '0.1']
+}")
+```
+
+```{python}
+weight = 0,1 
+alpha = 0.01 
+
+def neural_network(input, weight):
+    prediction = input * weight
+    return prediction
+
+```
+
+
+```{r}
+weight <- 0.1
+alpha <- 0.01
+
+neural_net <- function (input, weight)
+{
+  prediction <- input * weight
+  cat(prediction)
+}
+```
 
 
 
