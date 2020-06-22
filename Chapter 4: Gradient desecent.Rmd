@@ -131,13 +131,26 @@ input = 0.5
 for iteration in range(20):
     pred = input * weight
     error = (pred - goal_pred) ** 2
-    direction_and_amount = (pred - goal_pred) * input
+    direction_and_amount = (pred - goal_pred) * input # gradient descent step
     weight = weight - direction_and_amount
     
     print("Error:" + str(error) + " Predictions:" + str(pred))
 ```
 
+
+# Gradient descent
+
+
+
+
+# Learning is just reducing error
+
+
+# Derivatives and how to use them to learn
+
+# Divergence and alpha
+
 * add section headings 
 * finish notes summarizing each section
 
-
+  
