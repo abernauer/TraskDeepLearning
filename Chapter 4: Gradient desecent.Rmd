@@ -123,6 +123,24 @@ for iteration in range(1101):
 # Calculating both direction and amount from error
 
 _gradient descent_
+```{r}
+DiagrammeR::grViz(" digraph grad_descent {
+graph [style = dot, rankdir = LR]
+
+node [shape = circle]
+
+'0.5'
+'0.4'
+'0.30'
+
+'0.5' -> '0.4' [label = '-0.2']
+}
+                  ")
+```
+
+
+
+
 ```{python}
 weight = 0.5
 goal_pred = 0.8
@@ -138,7 +156,9 @@ for iteration in range(20):
 ```
 
 
-# Gradient descent
+# One iteration of Gradient descent
+
+
 
 
 
