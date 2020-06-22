@@ -172,7 +172,7 @@ node [shape = circle]
 ```
 
 ```{python}
-weight = 0,1 
+weight = 0.1 
 alpha = 0.01 
 
 def neural_network(input, weight):
@@ -196,22 +196,38 @@ neural_net <- function (input, weight)
 
 ```{r}
 DiagrammeR::grViz("digraph predict{
-graph [style = dot, rankdir = LR]
+graph [style = neato, rankdir = LR]
 
 node [shape = circle]
-
-'8.5' 
 '0.85'
-'0.023' [xlabel = 'Error']
+'8.5' 
+'0.023' [xlabel = 'Error', style = dashed]
 
 '8.5' -> '0.85' [label = '0.1']
 }")
 ```
 
 
-```{r}
-DiagrammeR::grViz(
+```{python}
+weight = 0.1 
+alpha = 0.01 
+
+def neural_network(input, weight):
+    prediction = input * weight
+    return prediction
+    
+number_of_toes = [8.5]
+win_or_lose_binary = [1] # (won !!!)
+
+input = number_of_toes[0]
+goal_pred = win_or_lose_binary[0]
+
+pred = neural_network(input, weight)
+
+error = (pred - goal_pred) ** 2
+
 ```
+
 
 
 
