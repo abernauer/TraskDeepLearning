@@ -310,7 +310,7 @@ weight_delta = input * delta
 weight -= weight_delta * alpha
 ```
 
-
+Alpha is the learning rate and controls how fast our Network is learning. 
 
 
 
@@ -318,8 +318,43 @@ weight -= weight_delta * alpha
 
 # Learning is just reducing error
 
+```{python}
+weight, goal_pred, input = (0.0, 0.8, 0.5)
+
+for iteration in range(4):
+    pred = input * weight 
+    error = (pred - goal_pred) ** 2
+    delta = pred - goal_pred
+    weight_delta = delta * input
+    weight = weight - weight_delta
+    print("Error:" + str(error) + " Prediction:" + str(pred))
+```
+
+There are many ways of measuring error in this case we are using mean squared error. 
+Our goal is reducing error to zero. Modify code to make error calculation in one line.
+
+
+
+# Several steps of learning 
+
+```{python}
+weight, goal_pred, input = (0.0, 0.8, 1.1)
+
+for iteration in range(4) : 
+    print ("-----\nWeight:" + str(weight))
+    pred = input * weight 
+    errror = (pred - goal_pred) ** 2 
+    delta = pred - goal_pred
+    delta_weight = delta * input
+    weight = weight - weight_delta
+    print("Error:" + str(error) + " Prediction: " + str(pred))
+    print("Delta:" + str(delta) + " Weight Delta:" + str(weight_delta))
+```
+
 
 # Derivatives and how to use them to learn
+
+
 
 # Divergence and alpha
 
