@@ -96,6 +96,27 @@ print("Weights Deltas:" + str(weight_deltas))
   
 
 # Gradient descent multiple inputs explained 
+Single input: prediction and calcing error and delta
+
+```{python}
+number_of_toes =[8.5]
+win_or_lose_binary = [1] # (won !!!)
+
+input = number_of_toes[0]
+true = win_or_lose_binary[0]
+pred = neural_net(input, weight)
+
+error = (pred - true_pred) ** 2
+
+delta = pred - true
+```
+
+
+```{python}
+
+```
+
+
 
 # Watching several steps of learning 
 
