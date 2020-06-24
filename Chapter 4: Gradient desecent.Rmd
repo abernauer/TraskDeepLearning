@@ -330,8 +330,16 @@ for iteration in range(4):
     print("Error:" + str(error) + " Prediction:" + str(pred))
 ```
 
+
 There are many ways of measuring error in this case we are using mean squared error. 
 Our goal is reducing error to zero. Modify code to make error calculation in one line.
+
+
+The secret sauce of learning is adjusting our _weights_ to reduce our _error_ to zero. 
+
+Another way of describing the relationship between _weight_ and _error_ is sensitivity. 
+
+``` error =  ((input * weight)) - goal_pred) ** 2 ```
 
 
 
@@ -354,6 +362,9 @@ for iteration in range(4) :
 
 # Derivatives and how to use them to learn
 
+You can change the weigths put all other variables should not be changed.
+
+Gradient Descent is just moving in the opposite direction of the derivative. Then in turn reducing the error to zero. 
 
 # Breaking gradient descent 
 
@@ -393,6 +404,8 @@ for iteration in range(20) :
     print("Error:" + str(error) + " Prediction: " + str(pred))
 
 ```
+
+Our network is very sensitive to large inputs and weights. Which will cause it to overcorrect and diverge from our goal error of zero. 
 
 
 
