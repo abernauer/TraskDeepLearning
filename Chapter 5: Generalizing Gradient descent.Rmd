@@ -281,11 +281,11 @@ for iter in range(3):
     print("Error:" + str(error))
     print("Delta:" + str(delta))
     print("Weight_Deltas")
-    print(
+    print(str(weight_deltas)
     
     )
-for i in range(len(weights)):
-    weights[i]-= alpha * weight_deltas[i]
+    for i in range(len(weights)):
+       weights[i]-= alpha * weight_deltas[i]
 
 ```
 
