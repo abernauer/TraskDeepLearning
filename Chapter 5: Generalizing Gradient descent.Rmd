@@ -396,3 +396,52 @@ for iter in range(3):
 Reminder to add brief description that we are fixing the error curve at zero in one of four dimensions on a plane. 
 
 
+# Gradient descent learning with multiple outputs
+
+
+**Empty net of multiple inputs **
+
+```{python}
+weights = [0.3, 0.2, 0.9]
+
+def ele_mul(scalar, vector):
+    out = [0, 0, 0]
+    for i in range(len(out)):
+        out[i] = vector[i] * scalar
+    return out
+
+def neural_net(input, weights):
+
+    pred = ele_mul(input, weights)
+    return pred
+
+```
+
+
+**Predict and calculating error and delta**
+
+```{python}
+wlrec = [0.65, 1.0, 1.0, 0.9]
+
+hurt = [0.1, 0.0, 0.0, 0.1]
+win = [ 1, 1, 0, 1]
+sad = [0.1, 0.0, 0.1, 0.2]
+
+input = wlrec[0]
+
+true_pred = [hurt[0], win[0], sad[0]]
+
+pred = neural_net(input, weights)
+
+error = [0, 0, 0]
+delta = [0, 0, 0]
+
+for i in range(len(true_pred)): 
+    
+    error[i] = (pred[i] - true_pred[i]) ** 2
+    delta[i] = pred[i] - true_pred[i]
+```
+
+
+
+
