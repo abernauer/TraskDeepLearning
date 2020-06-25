@@ -496,7 +496,7 @@ for i in range(len(true_pred)):
     error[i] = (pred[i] - true_pred[i]) ** 2
     delta[i] = pred[i] - true_pred[i]
 
-weight_deltas = scalar_ele_mul(input, weights)
+weight_deltas = scalar_ele_mul(input, delta)
 
 alpha = 0.01
 
@@ -556,7 +556,7 @@ for i in range(len(true_pred)):
     error[i] = (pred[i] - true_pred[i]) ** 2
     delta[i] = pred[i] - true_pred[i]
 
-weight_deltas = scalar_ele_mul(input, weights)
+weight_deltas = scalar_ele_mul(input, delta)
 
 alpha = 0.01
 
@@ -570,6 +570,7 @@ print("Weight_delta:" + str(weight_deltas))
 **Gradient descent with multi i/o**
 
 ```{python}
+import numpy as np
 def w_sum(a, b):
     assert(len(a) == len(b))
     
@@ -596,6 +597,14 @@ def neural_net(input, weights):
     
     return pred
     
+def outer_prod(vec_a, vec_b) :
+    out = np.zeros(len(vec_a), len(vec_b))
+    
+    for i in range(len(vec_a)) :
+        for j in range(len(vec_b)) :
+            out [i] [j] = vec_a[i] * vec_b[j]
+    return out
+    
 toes = [8.5, 9.5, 9.9, 9.0]
 wlrec = [0.65, 0.8, 0.8, 0.9]
 nfans = [1.2, 1.3, 0.5, 1.0]
@@ -617,8 +626,13 @@ delta = [0, 0, 0]
 for i in range(len(true_pred)):
 
     error[i] = (pred[i] - true_pred[i]) ** 2
-    delta = pred[i] - true[i]
+    delta = pred[i] - true_pred[i]
     
+weight_deltas = outer_prod(delta, input)
+
+for i in range(len(weights)) :
+    for j in range(len(weights[0])) :
+        weights [i][j] -= alpha * weight_deltas [i] [j]
 
 ```
 
