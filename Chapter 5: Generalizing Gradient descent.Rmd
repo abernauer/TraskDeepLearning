@@ -636,3 +636,13 @@ for i in range(len(weights)) :
 
 ```
 
+
+# What do these weigths learn?
+
+
+
+# Visualizing weight values
+
+
+
+# Visualizing dot products
