@@ -1,0 +1,27 @@
+---
+title: 'Chapter 6: Intro to Backprogation'
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+
+# The Streetlight Problem
+
+
+# Matrices and the matrix relationship
+
+
+
+# Neural Networks learn correlation 
+
+# Overfitting 
+
+# Backprogation: long-distance error attribution 
+
+# Linear versus nonlinear 
+
+# 
